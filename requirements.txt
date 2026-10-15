@@ -1,0 +1,11 @@
+# BRAHMO Clinical AI — Project Dependencies
+PyYAML>=6.0.1
+pydantic>=2.7.0
+pandas>=2.2.0
+sentence-transformers>=2.7.0
+groq>=0.9.0
+pypdf>=4.2.0
+pymupdf>=1.24.0
+python-dotenv>=1.0.1
+pytest>=8.1.0
+requests>=2.31.0

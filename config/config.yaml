@@ -1,0 +1,37 @@
+# BRAHMO Clinical AI — System Configuration
+# All paths, thresholds, parameters, and models must be defined here.
+# Zero hardcoding permitted in Python code.
+
+paths:
+  data_dir: "data"
+  corpus_dir: "corpus"
+  db_path: "data/brahmo.db"
+  migrations_dir: "migrations"
+  outputs_dir: "outputs"
+
+datasets:
+  cdci_file: "cdci_drug_subset.csv"
+  nlem_file: "nlem_extract.csv"
+  jan_aushadhi_file: "jan_aushadhi_extract.csv"
+  regulatory_events_file: "regulatory_gazette_events.csv"
+  pharmacy_stock_file: "pharmacy_stock.csv"
+  severe_interactions_file: "severe_interaction_seed.csv"
+  seed_prescriptions_file: "seed_prescriptions_template.csv"
+  sample_questions_file: "sample_questions.md"
+  local_protocol_file: "local_protocol_acute_fever.md"
+
+safety_rail:
+  as_of_date: "2026-10-15"
+  adult_paracetamol_daily_warn_mg: 3000.0
+  fuzzy_match_review_threshold: 0.80
+
+retrieval:
+  top_k_lexical: 5
+  top_k_semantic: 5
+  rrf_k: 60
+  embedding_model: "all-MiniLM-L6-v2"
+
+llm:
+  llm_provider: "groq"
+  llm_model: "llama-3.3-70b-versatile"
+  temperature: 0.0
